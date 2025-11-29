@@ -1,50 +1,73 @@
-# 🐍 Python Reverse Shell (Basit Geri Kabuk Arka Kapısı)
+## 🐍 Python Reverse Shell (Basic Reverse Shell Backdoor)
 
 <p align="center">
   <img src="https://img.shields.io/badge/Python-3.x-blue?style=for-the-badge&logo=python">
   <img src="https://img.shields.io/badge/Socket-TCP-green?style=for-the-badge&logo=pypi">
-  <img src="https://img.shields.io/badge/Amaç-Eğitimsel-red?style=for-the-badge">
+  <img src="https://img.shields.io/badge/Purpose-Educational-red?style=for-the-badge">
 </p>
 
 ---
 
-## 📺 Detaylı Anlatım: YouTube Videosu
+## 💡 Project Overview
 
-Bu depo, **Python socket** modülü kullanılarak geliştirilen ve siber güvenlik eğitimlerinde temel teşkil eden bir **Reverse Shell (Geri Kabuk)** arka kapısı uygulamasının kodlarını içermektedir. Projenin tüm detaylarını, kodun adım adım yazılışını ve çalışma mantığını aşağıdaki videodan izleyebilirsiniz.
+This repository contains the code for a basic **Reverse Shell** (Backdoor) developed using the **Python `socket`** module. This project is designed to demonstrate how an attacker's machine (the Listener) can receive a connection from a target machine (the Backdoor) and remotely execute commands.
+
+The primary goal is to **increase cybersecurity awareness** by illustrating the core mechanics of such tools, which is crucial for building effective defensive measures.
+
+### Key Features
+* **Simple TCP Connection:** Establishes a reliable connection using Python's standard `socket` library.
+* **Remote Command Execution:** Executes shell commands on the target system using the `subprocess` module.
+* **JSON Data Transfer:** Commands and output are transmitted using the JSON format to ensure data integrity during transfer.
+* **Change Directory (CD) Support:** Ability to change the working directory on the target machine using the `os` module.
+
+---
+
+## 🚨 Legal Disclaimer and Responsibility
 
 <p align="center">
-  <a href="http://www.youtube.com/watch?v=wj76ClEge_s">
+    <b>THIS SOFTWARE IS STRICTLY FOR CYBERSECURITY EDUCATION AND AWARENESS ONLY.</b>
+</p>
+
+* The purpose of this code is to **educate on cybersecurity principles** and show how malicious software operates.
+* The use of this software against any system, network, or device **without explicit, prior authorization is illegal and punishable by law.**
+* The developer/contributor of this project **is not responsible** for any misuse or malicious actions resulting from the use of this code.
+* The user is **solely responsible** for the ethical and legal implications of using this software.
+
+---
+
+## 🛠️ Requirements & Setup
+
+* **Python 3.x**
+* Standard Python Libraries (`socket`, `json`, `subprocess`, `os`)
+
+### Usage (Simulated)
+
+1.  **Start the Listener** (Attacker Machine):
+    ```bash
+    python listener.py
+    ```
+2.  **Execute the Backdoor** (Target Machine):
+    ```bash
+    python backdoor.py
+    # or the executable created via PyInstaller
+    ./backdoor_executable
+    ```
+3.  **Enter commands** through the Listener terminal once a connection is established.
+
+---
+
+## 📺 Detailed Explanation: YouTube Video
+
+The complete development process and a detailed explanation of the code, titled **"Python İle Kendi Virüsümü Yazdım | Eğitim Amaçlı"** (I Wrote My Own Virus With Python | For Educational Purposes) by the **Furares** channel, are covered in the video below.
+
+<p align="center">
+  <a href="https://youtu.be/wj76ClEge_s">
      
   </a>
   <br>
-  <a href="http://www.youtube.com/watch?v=wj76ClEge_s">
+  <a href="https://youtu.be/wj76ClEge_s">
     <h3>▶️ PYTHON İLE KENDİ VİRÜSÜMÜ YAZDIM | EĞİTİM AMAÇLI</h3>
   </a>
   <br>
-  **Kanal:** Furares | **Yayın Tarihi:** 2025-11-26 | **Süre:** 23:29
+  **Channel:** Furares | **Published:** 2025-11-26 | **Duration:** 23:29
 </p>
-
----
-
-## 💡 Proje Özeti
-
-Bu proje, bir saldırgan (Listener) ve bir hedef sistem (Backdoor) arasındaki iletişimi modelleyerek, saldırganın hedef sistemden bir bağlantı almasını ve uzaktan komutları yürütebilmesini sağlar.
-
-### Temel Özellikler
-* **TCP Bağlantısı:** Python'ın standart `socket` kütüphanesi üzerinden güvenilir TCP bağlantısı kurma.
-* **Uzaktan Komut Yürütme:** `subprocess` modülü ile hedef makinede kabuk komutlarını çalıştırabilme.
-* **JSON Veri Transferi:** Veri bütünlüğünü korumak için komut ve sonuç çıktılarının JSON formatında gönderilip alınması.
-* **CD Komutu Desteği:** `os` kütüphanesi ile çalışma dizinini değiştirebilme yeteneği.
-
----
-
-## 🚨 Yasal Uyarı ve Sorumluluk Reddi
-
-<p align="center">
-    <b>BU YAZILIM YALNIZCA SİBER GÜVENLİK EĞİTİMİ VE FARKINDALIĞI İÇİN GELİŞTİRİLMİŞTİR.</b>
-</p>
-
-* Bu projedeki kodların amacı, **savunma mekanizmalarını anlamak** ve kötü niyetli yazılımların çalışma prensiplerini öğrenmektir.
-* Bu yazılımın **izniniz veya yetkiniz olmayan** herhangi bir sistem, ağ veya cihaza karşı kullanılması **kesinlikle yasa dışıdır ve suç teşkil eder.**
-* Projenin geliştiricisi/paylaşanı, bu kodun herhangi bir yasa dışı kullanımından kaynaklanacak **zararlardan veya hukuki sonuçlardan sorumlu değildir.**
-* Kullanıcı, bu kodun etik ve yasal çerçeveler içerisinde kullanılmasından **tamamen kendisi sorumludur.**
