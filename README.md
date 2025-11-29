@@ -36,14 +36,5 @@ The use of this code against any system, network, or device **without explicit, 
 
 You can find the detailed step-by-step tutorial, titled **"Python İle Kendi Virüsümü Yazdım | Eğitim Amaçlı"** (I Wrote My Own Virus With Python | For Educational Purposes) by the **Furares** channel, below.
 
-<p align="center">
-  <a href="https://youtu.be/wj76ClEge_s">
-     
-  </a>
-  <br>
-  <a href="https://youtu.be/wj76ClEge_s">
-    <h3>▶️ PYTHON İLE KENDİ VİRÜSÜMÜ YAZDIM | EĞİTİM AMAÇLI</h3>
-  </a>
-  <br>
-  **Channel:** Furares | **Published:** 2025-11-26 | **Duration:** 23:29
-</p>
+[![Watch the video](https://img.youtube.com/vi/wj76ClEge_s/0.jpg)](https://www.youtube.com/watch?v=wj76ClEge_s)
+
